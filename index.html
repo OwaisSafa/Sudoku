@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!-- Difficulty Selection Screen -->
+    <div class="difficulty-screen" id="difficultyScreen">
+        <h1>Sudoku</h1>
+        <div class="difficulty-container">
+            <h2>Select Difficulty</h2>
+            <div class="difficulty-buttons">
+                <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+                <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div class="game-container hidden" id="gameScreen">
+        <!-- App Bar -->
+        <div class="app-bar">
+            <div class="timer">00:00</div>
+            <div>
+                <button class="icon-btn" id="themeToggle">
+                    <span class="material-icons">dark_mode</span>
+                </button>
+                <button class="icon-btn" id="newGame">
+                    <span class="material-icons">refresh</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Board -->
+        <div class="game-board"></div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <!-- Number Pad -->
+            <div class="number-pad">
+                <button class="num-btn" data-number="1">1</button>
+                <button class="num-btn" data-number="2">2</button>
+                <button class="num-btn" data-number="3">3</button>
+                <button class="num-btn" data-number="4">4</button>
+                <button class="num-btn" data-number="5">5</button>
+                <button class="num-btn" data-number="6">6</button>
+                <button class="num-btn" data-number="7">7</button>
+                <button class="num-btn" data-number="8">8</button>
+                <button class="num-btn" data-number="9">9</button>
+                <button class="num-btn" data-number="0">
+                    <span class="material-icons">backspace</span>
+                </button>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="action-btn" id="undoBtn" title="Undo">
+                    <span class="material-icons">undo</span>
+                </button>
+                <button class="action-btn" id="notesBtn" title="Notes Mode">
+                    <span class="material-icons">edit</span>
+                </button>
+                <button class="action-btn" id="hintBtn" title="Get Hint">
+                    <span class="material-icons">lightbulb</span>
+                </button>
+                <button class="action-btn" id="solveBtn" title="Solve Puzzle">
+                    <span class="material-icons">auto_fix_high</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Win Modal -->
+    <div class="modal-overlay hidden" id="winModal">
+        <div class="modal">
+            <h2>Congratulations!</h2>
+            <p class="stats"></p>
+            <button class="modal-btn" id="playAgain">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
